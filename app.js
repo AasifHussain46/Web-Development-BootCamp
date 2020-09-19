@@ -17,7 +17,7 @@ var campgroundRoutes	= require("./routes/campgrounds"),
 	authRoutes			=require("./routes/index");
 	
 const pass=process.env.password;
-mongoose.connect("mongodb+srv://campground:qwerty@7890@campground.u8dxx.mongodb.net/<dbname>?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://campground:pass@campground.u8dxx.mongodb.net/<dbname>?retryWrites=true&w=majority",{
 		  useNewUrlParser: true,
 		  useUnifiedTopology: true
 		});
