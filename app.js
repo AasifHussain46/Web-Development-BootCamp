@@ -21,12 +21,13 @@ mongoose.connect("mongodb+srv://campground:"+pass+"@campground.u8dxx.mongodb.net
 		  useNewUrlParser: true,
 		  useUnifiedTopology: true
 		});
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
-// seedDB();
+app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-
+// seedDB();
 // 	Passport Configuration
 app.use(require("express-session")({
 	secret:"Onece again I won",
